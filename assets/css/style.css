@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+
+*,
+html,
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e9edf2;
+  color: #414a62;
+}
+
+input,
+button {
+  font-size: 16px;
+}
+
+header {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #45ae9f;
+  color: white;
+}
+
+header > h1 {
+  display: flex;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.input_section {
+  width: 32rem;
+  border-radius: 22px;
+  padding: 16px;
+  margin-top: 2rem;
+  background-color: #fdfdfd;
+}
+
+.input_section > h2 {
+  text-align: center;
+}
+
+.input_section > form > .input {
+  margin: 16px 0;
+}
+
+.input_section > form > button {
+  background-color: #45ae9f;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 14px 0 14px 0;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+.input_section > form > .input > label {
+  font-weight: bold;
+}
+
+.input_section > form > .input > input {
+  background: #efefef;
+  border: 0;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.input_section > form > .input > input:focus {
+  outline: none;
+}
+
+.input_section > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.book_shelf {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 3rem 0 3rem 0;
+  border: 0;
+  padding: 28px;
+  border-radius: 22px;
+  background-color: #fefefe;
+}
+
+.book_shelf > form {
+  display: flex;
+}
+
+.book_shelf > form > input {
+  background: #efefef;
+  border: 0;
+  width: 300px;
+  padding: 12px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.book_shelf > form > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  background-color: #45ae9f;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.book_shelf > h2 {
+  margin: 2rem 0 0 0;
+}
+
+.book_shelf > .book_list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 2rem;
+  /* overflow-x: auto; */
+  padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+  padding: 8px 16px 16px 16px;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+.book_shelf > .book_list > .book_item > h3,
+p {
+  margin: 10px 0;
+}
+
+.book_shelf > .book_list > .book_item > h3 {
+  margin: 1rem 0 1rem 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  padding: 5px;
+  margin: 0 5px 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+.book_shelf > .book_list > .book_item > .action > .complete {
+  background-color: #eaf6f4;
+  color: #45ae9f;
+  position: relative;
+  display: inline-block;
+}
+
+.book_shelf > .book_list > .book_item > .action > .delete {
+  background-color: #eaf6f4;
+  color: #45ae9f;
+  position: relative;
+  display: inline-block;
+}
+
+.empty_list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 0 1rem 1rem;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+    0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+.complete .tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.complete .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.complete:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.delete .tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.delete .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.delete:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeBookshelf &mdash; Apps</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1><i class="bx bx-library"></i> MeBookshelf</h1>
+    </header>
+
+    <main>
+      <section class="input_section">
+        <h2>Masukan Buku</h2>
+        <form id="inputBook" action="#">
+          <div class="input">
+            <label for="inputTitle">Judul:</label>
+            <span style="color: red">*</span>
+            <input
+              id="inputTitle"
+              type="text"
+              placeholder="Tuliskan judul buku"
+              required
+            />
+          </div>
+          <div class="input">
+            <label for="inputAuthor">Penulis:</label>
+            <span style="color: red">*</span>
+            <input
+              id="inputAuthor"
+              type="text"
+              placeholder="Tuliskan penulis buku"
+              required
+            />
+          </div>
+          <div class="input">
+            <label for="inputYear">Tahun:</label>
+            <span style="color: red">*</span>
+            <input
+              id="inputYear"
+              type="number"
+              placeholder="Tuliskan tahun terbit buku"
+              required
+            />
+          </div>
+          <div class="input_inline">
+            <label for="inputIsComplete">Selesai dibaca:</label>
+            <input id="inputIsComplete" type="checkbox" />
+          </div>
+          <button id="submitForm" type="submit">Simpan Buku</button>
+        </form>
+      </section>
+
+      <section class="book_shelf">
+        <form id="searchBook">
+          <input
+            id="searchTitle"
+            type="text"
+            placeholder="Cari judul buku..."
+          />
+          <button id="submitSearch" type="submit">
+            <i class="bx bx-sm bx-search"></i>
+          </button>
+        </form>
+
+        <h2>Lanjut membaca</h2>
+
+        <div id="continueReading" class="book_list"></div>
+
+        <h2>Selesai dibaca</h2>
+
+        <div id="completeReading" class="book_list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <p>
+          Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          &mdash; <strong>Dian Ananda</strong>. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
+</html>
