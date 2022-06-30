@@ -139,7 +139,7 @@ main {
 }
 
 .book_shelf > h2 {
-  margin: 2rem 0 0 0;
+  margin: 2rem 0 2rem 0;
 }
 
 .book_shelf > .book_list {
@@ -147,7 +147,6 @@ main {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 2rem;
-  /* overflow-x: auto; */
   padding: 16px;
 }
 
@@ -170,8 +169,8 @@ p {
 }
 
 .book_shelf > .book_list > .book_item > .action > button {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border: 0;
   padding: 5px;
   margin: 0 5px 0 0;
@@ -181,15 +180,25 @@ p {
 }
 
 .book_shelf > .book_list > .book_item > .action > .complete {
+  background: url("../icons/check.svg") no-repeat;
+  background-size: 35px;
   background-color: #eaf6f4;
-  color: #45ae9f;
   position: relative;
   display: inline-block;
 }
 
 .book_shelf > .book_list > .book_item > .action > .delete {
+  background: url("../icons/trash.svg") no-repeat;
+  background-size: 35px;
   background-color: #eaf6f4;
-  color: #45ae9f;
+  position: relative;
+  display: inline-block;
+}
+
+.book_shelf > .book_list > .book_item > .action > .revision {
+  background: url("../icons/revision.svg") no-repeat;
+  background-size: 35px;
+  background-color: #eaf6f4;
   position: relative;
   display: inline-block;
 }
@@ -207,7 +216,9 @@ p {
     0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
 }
 
-.complete .tooltip {
+.complete .tooltip,
+.delete .tooltip,
+.revision .tooltip {
   visibility: hidden;
   width: 120px;
   background-color: #555;
@@ -224,7 +235,9 @@ p {
   transition: opacity 0.3s;
 }
 
-.complete .tooltip::after {
+.complete .tooltip::after,
+.delete .tooltip::after,
+.revision .tooltip::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -235,40 +248,9 @@ p {
   border-color: #555 transparent transparent transparent;
 }
 
-.complete:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
-}
-
-.delete .tooltip {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.delete .tooltip::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.delete:hover .tooltip {
+.complete:hover .tooltip,
+.delete:hover .tooltip,
+.revision:hover .tooltip {
   visibility: visible;
   opacity: 1;
 }
